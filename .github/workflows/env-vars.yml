@@ -1,0 +1,8 @@
+env:
+  APP_ENV: development
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "App environment is $APP_ENV"
