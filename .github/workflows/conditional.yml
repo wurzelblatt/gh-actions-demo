@@ -4,6 +4,10 @@ on:
     branches: [main]
 
 jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "$github.ref"
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/head/main'
