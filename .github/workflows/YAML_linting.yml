@@ -13,16 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run Prettier
-        uses: creycon/prettier_action@v4.3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          # Prüft nur YAML-Dateien (oder verwende '**/*.{yml,yaml}')
-          prettier_args: --check **/*.yml
+          node-version: '20'
 
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: '20'
-
-      # - name: Run Prettier Check
-      #   run: npx prettier --check "**/*.yml"
+      - name: Run Prettier Check
+        run: npx prettier --check "**/*.yml"
