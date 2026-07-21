@@ -1,0 +1,16 @@
+name: Multiple jobs
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building project"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running tests"
