@@ -1,6 +1,9 @@
+name: Env Vars Demo
+on:
+  push:
+    branches: [main]
 env:
-  APP_ENV: development
-
+  APP_ENV: development # ← workflow level: every job/step below can see it
 jobs:
   example:
     runs-on: ubuntu-latest
